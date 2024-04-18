@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// FONTS
+$heading1       : 52px;
+$heading2       : 44px;
+$subtitle1      : 20px;
+$subtitle2      : 20px;
+$paragraph1_r   : 16px;
+$paragraph1_m   : 16px;
+$paragraph2_r   : 14px;
+$paragraph2_m   : 14px;
+$caption2       : 12px;
+$stylefontfamily: "Poppins", "Sans-serif";
+
+//COLORS
+$background-greenDark: #405741;
+$background-greenLigth: #9ACB6B;
+$background-blueLigth: #E9F8EF;
+$background-grayLigth: #F1F2F4;
+$background-black: #121216;
+$background-purple: #494961;
+$background-grayDark: #A8A9B2;
+$text-color-black: #000000;
+$background-white: #FFFFFF;
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  font-family: $stylefontfamily;
+  background-color: $background-white !important;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+// breakpoints
+$breakpoints: (
+  mobileXs: 390px,
+  mobile: 480px,
+  media-tablet: 650px,
+  tablet: 744px,
+  ipad: 820px,
+  screenXs: 880px,
+  screen: 1024px,
+  screenxl: 1069px,
+  desktop: 1200px,
+  large: 1440px,
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
