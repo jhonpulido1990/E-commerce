@@ -5,27 +5,35 @@
 @import "primeicons/primeicons.css";
 
 // FONTS
-$heading1       : 52px;
-$heading2       : 44px;
-$subtitle1      : 20px;
-$subtitle2      : 20px;
-$paragraph1_r   : 16px;
-$paragraph1_m   : 16px;
-$paragraph2_r   : 14px;
-$paragraph2_m   : 14px;
-$caption2       : 12px;
+$heading1: 52px;
+$heading2: 44px;
+$subtitle1: 20px;
+$subtitle2: 20px;
+$paragraph1_r: 16px;
+$paragraph1_m: 16px;
+$paragraph2_r: 14px;
+$paragraph2_m: 14px;
+$caption2: 12px;
 $stylefontfamily: "Poppins", "Sans-serif";
 
 //COLORS
 $background-greenDark: #405741;
-$background-greenLigth: #9ACB6B;
-$background-blueLigth: #E9F8EF;
-$background-grayLigth: #F1F2F4;
+$background-greenLigth: #9acb6b;
+$background-blueLigth: #e9f8ef;
+$background-grayLigth: #f1f2f4;
 $background-black: #121216;
 $background-purple: #494961;
-$background-grayDark: #A8A9B2;
+$background-grayDark: #a8a9b2;
 $text-color-black: #000000;
-$background-white: #FFFFFF;
+$background-white: #ffffff;
+$background-variant: #4a639a;
+$background-complementary: #4af6d7;
+$background-primary: #2f3f61;
+$background-disabled: #999999;
+//BORDER
+$border-primary: 1px solid $background-primary;
+$border-variant: 1px solid $background-variant;
+$border-disabled: 1px solid $background-disabled;
 
 // RESET
 @layer reset, primeng;
@@ -35,18 +43,70 @@ $background-white: #FFFFFF;
   box-sizing: border-box;
 }
 
-
-html, body {
-  height: 100%;
+body {
   font-family: $stylefontfamily;
   background-color: $background-white !important;
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 button {
   cursor: pointer;
-  width: 220px;
-  height: 48px;
+}
+
+.button {
+  width: 138px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  background-color: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+.custom__button--fill {
+  background-color: $background-variant;
+  color: $background-white;
+
+  &:hover {
+    background-color: $background-complementary;
+    color: $background-primary;
+  }
+}
+
+.custom__button--line {
+  border: $border-variant;
+  background-color: $background-white;
+  color: $background-primary;
+
+  &:hover {
+    background-color: $background-variant;
+    color: $background-white;
+  }
+}
+
+.chip {
+  background-color: #b7fbef;
+  color: $background-primary;
+  border: $border-primary;
+  font-weight: 500;
+}
+
+.required::after {
+  content: "*";
+  font-size: 1.2rem;
+  padding-left: 0.3rem;
+  color: red;
 }
 
 // breakpoints

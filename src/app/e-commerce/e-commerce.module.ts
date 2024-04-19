@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/product/product.component';
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from '../shared/shared.module';
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SharedModule } from '../shared/shared.module';
     ECommerceRoutingModule,
     LayoutModule,
     SharedModule,
+    PrimeNgModule
   ]
 })
 export class ECommerceModule { }

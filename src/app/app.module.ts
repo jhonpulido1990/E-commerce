@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './e-commerce/layout/layout.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { LayoutModule } from './e-commerce/layout/layout.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [provideAnimations()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

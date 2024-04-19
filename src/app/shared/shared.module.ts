@@ -4,6 +4,8 @@ import { CardComponent } from './card/card.component';
 import { Banner2Component } from './banner2/banner2.component';
 import { ProductsComponent } from './products/products.component';
 import { CardProductComponent } from './card-product/card-product.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
 
@@ -12,15 +14,19 @@ import { CardProductComponent } from './card-product/card-product.component';
     CardComponent,
     Banner2Component,
     ProductsComponent,
-    CardProductComponent
+    CardProductComponent,
+    FormularioComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNgModule,
   ],
   exports: [
     CardComponent,
     Banner2Component,
-    ProductsComponent
+    ProductsComponent,
+    CardProductComponent,
+    FormularioComponent,
   ]
 })
 export class SharedModule { }
