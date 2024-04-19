@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid green;
+  align-items: center;
+  padding-bottom: 50px;
+  color: #091E42;
+  h1 {
+    font-size: $heading2;
+    font-weight: 600;
+    line-height: 66px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      input {
+        text-indent: 10px;
+        height: 48px;
+        &::placeholder {
+          color: #64748B;
+          font-size: $paragraph1_m;
+          line-height: 24px;
+        }
+      }
+    }
+    label, p {
+      font-size: $paragraph1_r;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    button {
+      width: 220px;
+      height: 48px;
+      font-weight: 600;
+      font-size: $paragraph1_m;
+      line-height: 24px;
+      border-radius: 8px;
+      background-color: $background-greenDark;
+      color: $background-white;
+      &:hover {
+        background-color: $background-greenLigth;
+      }
+    }
+  }
+}

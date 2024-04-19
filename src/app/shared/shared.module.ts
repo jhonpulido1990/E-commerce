@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { CardProductComponent } from './card-product/card-product.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
   imports: [
     CommonModule,
     PrimeNgModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CardComponent,

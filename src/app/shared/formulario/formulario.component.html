@@ -1,13 +1,29 @@
 <form>
-  <div>
-    <h1>Product management</h1>
+  <h1>Product management</h1>
+  <div class="formulario">
+    <label>
+      Name
+      <input type="text" pInputText placeholder="Name" />
+    </label>
+    <label>
+      Imagen
+      <input type="text" pInputText placeholder="Link" />
+    </label>
+    <label>
+      Price
+      <input type="text" pInputText placeholder="Price" />
+    </label>
+    <div class="card flex">
+      <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+      <p>Does this product have a discount?</p>
+    </div>
+    <div class="card flex">
+      <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+      <p>Do you want to show this product in the main section?</p>
+    </div>
+    <label>Discount
+      <input type="text" pInputText placeholder="Discount" />
+    </label>
+    <button>Save product</button>
   </div>
-
-  <div class="card flex justify-content-center">
-    <span class="p-float-label">
-        <input pInputText id="username" />
-        <label for="username">Username</label>
-    </span>
-</div>
-
 </form>
