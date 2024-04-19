@@ -1,0 +1,56 @@
+@import "../../../../styles.scss";
+
+.mobile {
+  display: none;
+}
+
+.desk {
+  display: flex;
+  justify-content: space-around;
+  height: 92px;
+  align-items: center;
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 24px;
+    ul {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+      align-content: center;
+      justify-content: flex-end;
+      li {
+        a {
+          text-decoration: none;
+          color: $background-purple;
+          line-height: 24px;
+          font-size: $paragraph1_r;
+          font-weight: 500;
+        }
+      }
+    }
+    .menu_img {
+      display: flex;
+      gap: 24px;
+      img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include media-up(ipad) {
+  .desk {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 92px;
+  }
+}

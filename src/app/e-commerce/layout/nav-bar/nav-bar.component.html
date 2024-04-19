@@ -1,1 +1,62 @@
-<p>nav-bar works!</p>
+<nav class="desk">
+  <div class="logo">
+    <img src="../../../../assets/images/logotipo.png" alt="">
+  </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">Products</a>
+      </li>
+      <li>
+        <a href="">Teeth Whitening</a>
+      </li>
+      <li>
+        <a href="">Toothpaste</a>
+      </li>
+      <li>
+        <a href="">Mouthwash</a>
+      </li>
+    </ul>
+    <div class="menu_img">
+      <img src="../../../../assets/images/Vector1.png" alt="">
+      <img src="../../../../assets/images/Vector2.png" alt="">
+    </div>
+  </div>
+</nav>
+
+<nav class="mobile">
+  <div class="logo">
+    <img src="../../../../assets/images/logotipo.png" alt="">
+  </div>
+  <p-sidebar [(visible)]="sidebarVisible">
+    <div>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Products</a>
+        </li>
+        <li>
+          <a href="">Teeth Whitening</a>
+        </li>
+        <li>
+          <a href="">Toothpaste</a>
+        </li>
+        <li>
+          <a href="">Mouthwash</a>
+        </li>
+      </ul>
+      <div class="menu_img">
+        <img src="../../../../assets/images/Vector1.png" alt="">
+        <img src="../../../../assets/images/Vector2.png" alt="">
+      </div>
+    </div>
+  </p-sidebar>
+  <p-button [text]="true" (click)="sidebarVisible = true" class="pi pi-bars"
+    [ngStyle]="{'font-size': '40px', 'color': '#494961'}">
+  </p-button>
+</nav>
