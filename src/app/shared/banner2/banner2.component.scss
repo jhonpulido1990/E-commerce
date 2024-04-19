@@ -1,0 +1,129 @@
+@import "../../../styles.scss";
+
+.banner {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-bottom: 30px;
+  .banner_product1,
+  .banner_product2 {
+    width: 584px;
+    height: 273px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    .content_banner {
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-size: $heading2;
+        font-weight: 600;
+        line-height: 66px;
+      }
+      .paragraph {
+        font-size: $paragraph1_r;
+        font-weight: 400;
+        line-height: 24px;
+        padding-bottom: 30px;
+      }
+      .btn {
+        border-radius: 8px;
+        font-family: $stylefontfamily;
+        font-size: $paragraph1_r;
+        font-weight: 600;
+        line-height: 24px;
+        color: $background-white;
+      }
+      .btn1 {
+        background-color: $background-greenLigth;
+        border-color: $background-greenLigth;
+        &:hover {
+          background-color: #67814e;
+        }
+      }
+      .btn2 {
+        background-color: $background-greenDark;
+        border-color: $background-greenDark;
+        &:hover {
+          background-color: #589e5b;
+        }
+      }
+    }
+  }
+  .banner_product1 {
+    color: $background-white;
+    background-image: linear-gradient(
+      90deg,
+      hsl(179deg 98% 21%) 0%,
+      hsl(179deg 95% 23%) 5%,
+      hsl(179deg 94% 25%) 10%,
+      hsl(179deg 93% 26%) 14%,
+      hsl(179deg 92% 28%) 19%,
+      hsl(179deg 92% 29%) 24%,
+      hsl(179deg 92% 30%) 29%,
+      hsl(179deg 91% 32%) 33%,
+      hsl(179deg 91% 33%) 38%,
+      hsl(179deg 91% 34%) 43%,
+      hsl(179deg 91% 35%) 48%,
+      hsl(179deg 91% 36%) 52%,
+      hsl(179deg 90% 37%) 57%,
+      hsl(179deg 90% 38%) 62%,
+      hsl(179deg 90% 39%) 67%,
+      hsl(179deg 90% 40%) 71%,
+      hsl(179deg 90% 41%) 76%,
+      hsl(179deg 90% 42%) 81%,
+      hsl(179deg 90% 43%) 86%,
+      hsl(179deg 90% 44%) 90%,
+      hsl(179deg 90% 45%) 95%,
+      hsl(179deg 90% 45%) 100%
+    );
+  }
+  .banner_product2 {
+    color: $background-black;
+    background-image: linear-gradient(
+      90deg,
+      hsl(201deg 100% 86%) 0%,
+      hsl(201deg 100% 85%) 4%,
+      hsl(201deg 100% 84%) 9%,
+      hsl(201deg 100% 83%) 13%,
+      hsl(201deg 100% 83%) 17%,
+      hsl(201deg 100% 82%) 22%,
+      hsl(200deg 100% 81%) 26%,
+      hsl(200deg 100% 80%) 30%,
+      hsl(200deg 100% 79%) 35%,
+      hsl(200deg 100% 78%) 39%,
+      hsl(200deg 99% 78%) 43%,
+      hsl(200deg 99% 77%) 48%,
+      hsl(200deg 99% 76%) 52%,
+      hsl(200deg 99% 76%) 57%,
+      hsl(200deg 99% 75%) 61%,
+      hsl(200deg 99% 75%) 65%,
+      hsl(200deg 99% 73%) 70%,
+      hsl(200deg 99% 72%) 74%,
+      hsl(200deg 99% 70%) 78%,
+      hsl(200deg 99% 68%) 83%,
+      hsl(200deg 99% 66%) 87%,
+      hsl(200deg 99% 63%) 91%,
+      hsl(199deg 99% 60%) 96%,
+      hsl(198deg 99% 55%) 100%
+    );
+  }
+}
+
+@include media-up(desktop) {
+  .banner {
+    flex-wrap: wrap;
+    .banner_product1,
+    .banner_product2 {
+      width: 584px;
+      height: 273px;
+      width: 80%;
+      .content_banner {
+        button {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
