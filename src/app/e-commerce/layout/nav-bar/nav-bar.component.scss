@@ -52,5 +52,11 @@
     justify-content: space-around;
     align-items: center;
     height: 92px;
+    button {
+      width: 42px;
+      height: 42px;
+      background-color: transparent;
+      border: none;
+    }
   }
 }

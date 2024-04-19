@@ -1,0 +1,55 @@
+@import "../../../../styles.scss";
+
+.content_header {
+  background-image: url("../../../../assets/images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 160px 0;
+  padding-left: 135px;
+  .title {
+    color: $background-black;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 78px;
+    padding-bottom: 8px;
+  }
+  .paragraph {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 56px;
+  }
+  p-button {
+    p {
+      color: $background-white;
+      font-size: $paragraph1_m;
+      font-weight: 600;
+      line-height: 24px;
+      padding-right: 6px;
+    }
+  }
+}
+
+@include media-up(desktop) {
+  .content_header {
+    padding: 200px 0 20px 20px;
+  }
+}
+
+@include media-up(screen) {
+  .content_header {
+    div {
+      width: 402px;
+    }
+  }
+}
+
+@include media-up(media-tablet) {
+  .content_header {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

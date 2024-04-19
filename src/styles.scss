@@ -28,6 +28,7 @@ $text-color-black: #000000;
 $background-white: #FFFFFF;
 
 // RESET
+@layer reset, primeng;
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +45,8 @@ html, body {
 
 button {
   cursor: pointer;
+  width: 220px;
+  height: 48px;
 }
 
 // breakpoints
