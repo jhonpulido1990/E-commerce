@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+.contain {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  .contain_product {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .containt_info {
+      text-align: center;
+      .title {
+        font-size: $heading2;
+        font-weight: 600;
+        line-height: 66px;
+        color: #091E42;
+      }
+      .paragraph {
+        font-size: $paragraph1_r;
+        font-weight: 400;
+        line-height: 24px;
+        color: #172B4D;
+      }
+    }
+  }
+}
