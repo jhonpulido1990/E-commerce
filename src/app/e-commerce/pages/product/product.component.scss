@@ -1,0 +1,21 @@
+@import '../../../../styles.scss';
+
+.contain_dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 8px;
+  app-formulario, app-table {
+    width: 50%;
+  }
+}
+
+@include media-up(desktop) {
+  .contain_dashboard {
+    flex-wrap: wrap;
+    padding: 20px;
+    app-formulario, app-table {
+      width: 100%;
+    }
+  }
+}

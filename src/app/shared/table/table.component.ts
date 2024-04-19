@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './table.component.scss'
 })
 export class TableComponent {
-
+  products!: any[];
 }

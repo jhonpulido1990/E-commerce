@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { CheckboxModule } from 'primeng/checkbox';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     InputTextModule,
     InputGroupModule,
     InputGroupAddonModule,
-    CheckboxModule
+    CheckboxModule,
+    TableModule,
   ]
 })
 export class PrimeNgModule { }
