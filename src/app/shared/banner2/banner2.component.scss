@@ -117,7 +117,6 @@
     .banner_product2 {
       width: 584px;
       height: 273px;
-      width: 80%;
       .content_banner {
         button {
           width: 150px;
@@ -127,3 +126,14 @@
   }
 }
 
+@include media-up(media-tablet) {
+
+  .banner_product1,
+  .banner_product2 {
+    height: 100%;
+    img {
+      width: 80px;
+      height: auto;
+    }
+  }
+}
