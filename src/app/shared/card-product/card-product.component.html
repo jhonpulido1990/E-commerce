@@ -1,0 +1,13 @@
+<div class="card">
+  <img class="size_img" [src]=product.imgUrl alt="">
+  <p class="title">{{ product.text }}</p>
+  <div class="info">
+    <p class="info_des">${{ product.desc }}</p>
+    <p class="info_ant">${{ product.price }}</p>
+    <p class="info_percen">%{{ product.percen }}</p>
+  </div>
+  <button>
+    <img src="../../../assets/images/shopping_cart.png" alt="">
+    <p>Add to Cart</p>
+  </button>
+</div>

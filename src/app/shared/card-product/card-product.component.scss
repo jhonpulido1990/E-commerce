@@ -1,0 +1,61 @@
+@import "../../../styles.scss";
+
+.card {
+  width: 278px;
+  height: 424px;
+  border-radius: 16px;
+  border: 1px solid #dcdfe4;
+  padding: 15px;
+  gap: 16px;
+  .size_img {
+    width: 248px;
+    height: auto;
+  }
+  .title {
+    font-size: $paragraph2_m;
+    font-weight: 500;
+    line-height: 21px;
+    color: $background-black;
+    padding-bottom: 24px;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 24px;
+    .info_des {
+      font-size: $subtitle1;
+      font-weight: 600;
+      line-height: 30px;
+      color: $text-color-black;
+      text-align: center;
+    }
+    .info_ant {
+      text-decoration: line-through;
+    }
+    .info_ant, .info_percen {
+      font-size: $paragraph1_r;
+      font-weight: 400;
+      line-height: 24px;
+      color: #8590A2;
+      text-align: center;
+    }
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background-color: $background-greenDark;
+    &:hover {
+      background-color: $background-greenLigth;
+    }
+    p {
+      font-size: $paragraph1_r;
+      font-weight: 600;
+      line-height: 24px;
+      color: $background-white;
+    }
+  }
+}

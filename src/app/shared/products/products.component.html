@@ -5,7 +5,7 @@
       <p class="paragraph">Top Picks for Sustainable Dental Care</p>
     </div>
     <div class="containt_card">
-      cards
+      <app-card-product *ngFor="let product of productos" [product]="product" />
     </div>
   </div>
 </div>
