@@ -1,15 +1,15 @@
 <div class="card">
   <p-table #dt1 [value]="products" dataKey="id">
     <ng-template pTemplate="caption">
-      <div class="flex">
+      <div class="flex caption_header">
         <span class="p-input-icon-left ml-auto">
           <i class="pi pi-search"></i>
-          <input pInputText type="text" placeholder="Search keyword" />
+          <input pInputText type="text" placeholder="Global Search" />
         </span>
       </div>
     </ng-template>
     <ng-template pTemplate="header">
-      <tr>
+      <tr class="caption_header">
         <th style="width: 4rem">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
@@ -22,7 +22,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
-      <tr>
+      <tr class="caption_header">
         <td>
           <p-tableCheckbox [value]="product"></p-tableCheckbox>
         </td>
