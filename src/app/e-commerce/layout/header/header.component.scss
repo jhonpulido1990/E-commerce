@@ -20,7 +20,19 @@
     line-height: 30px;
     padding-bottom: 56px;
   }
-  p-button {
+  button {
+    width: 220px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: $background-greenDark;
+    border-radius: 8px;
+    &:hover {
+      background-color: $background-greenLigth;
+    }
     p {
       color: $background-white;
       font-size: $paragraph1_m;

@@ -7,6 +7,7 @@ import { CardProductComponent } from './card-product/card-product.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     Banner2Component,
     ProductsComponent,
     CardProductComponent,
-    FormularioComponent
+    FormularioComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     CardProductComponent,
     FormularioComponent,
+    TableComponent,
   ]
 })
 export class SharedModule { }
