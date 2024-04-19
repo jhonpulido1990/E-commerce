@@ -1,0 +1,58 @@
+@import "../../../styles.scss";
+
+.content_card {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 0;
+  .card_1, .card_2 {
+    display: flex;
+    gap: 24px;
+    .card {
+      width: 278px;
+      height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .card_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 98px;
+        height: 125px;
+        text-align: center;
+        gap: 5px;
+      }
+    }
+    .card1 {
+      background-color: #FFEEF4;
+    }
+    .card2 {
+      background-color: #E8FBFF;
+    }
+    .card3 {
+      background-color: #E5FFF1;
+    }
+    .card4 {
+      background-color: #EFEFFE;
+    }
+  }
+}
+
+@include media-up(desktop) {
+  .content_card {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include media-up(media-tablet) {
+  .content_card {
+    flex-direction: column;
+    .card_1, .card_2 {
+      flex-direction: column;
+    }
+  }
+}
