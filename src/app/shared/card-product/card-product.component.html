@@ -1,10 +1,10 @@
-<div class="card">
+<div class="card" *ngIf="product.outsourcing">
   <img class="size_img" [src]=product.ImgUrl alt="">
   <p class="title">{{ product.Name }}</p>
   <div class="info">
-    <p class="info_des">${{ product.price }}</p>
-    <p class="info_ant">${{ product.price }}</p>
-    <p class="info_percen">%{{ product.percen }}</p>
+    <p class="info_des">${{ product.price - ((product.price * product.percen) / 100) }}</p>
+    <p class="info_ant" *ngIf="product.Discount" >${{ product.price }}</p>
+    <p class="info_percen" *ngIf="product.Discount">{{ product.percen }}%</p>
   </div>
   <button>
     <img src="../../../assets/images/shopping_cart.png" alt="">
