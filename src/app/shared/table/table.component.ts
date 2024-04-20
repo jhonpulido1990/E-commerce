@@ -14,6 +14,6 @@ export class TableComponent {
 
   constructor() {
     const itemCollection = collection(this.firestore, 'ListProduct');
-    this.item$ = collectionData(itemCollection) as Observable<Product[]>;
+    this.item$ = collectionData(itemCollection, {idField: 'id'}) as Observable<Product[]>;
   }
 }

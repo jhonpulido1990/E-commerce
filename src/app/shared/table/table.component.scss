@@ -17,10 +17,16 @@
   }
 }
 
+img {
+  width: 100px;
+  height: auto;
+}
+
+th, td {
+  text-align: center;
+}
+
 .caption_header {
   height: 80px;
   align-items: center;
-  th {
-    text-align: center;
-  }
 }

@@ -4,5 +4,6 @@ export interface Product {
   ImgUrl: string;
   price: number;
   percen: number;
-  Discount: string;
+  Discount: boolean;
+  outsourcing: boolean;
 }

@@ -13,29 +13,33 @@ export class ProductsComponent {
     {
       ImgUrl: '../../../assets/images/splash.png',
       Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: '135',
+      Discount: true,
       price: 150,
-      percen: 10
+      percen: 10,
+      outsourcing: true
     },{
       ImgUrl: '../../../assets/images/shampoo.png',
       Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: '135',
+      Discount: true,
       price: 150,
-      percen: 10
+      percen: 10,
+      outsourcing: true
     },
     {
       ImgUrl: '../../../assets/images/cepillobamboo.png',
       Name: 'organic bamboo toothbrush with soft natural bamboo bristles ',
-      Discount: '135',
+      Discount: true,
       price: 150,
-      percen: 10
+      percen: 10,
+      outsourcing: true
     },
     {
       ImgUrl: '../../../assets/images/splash.png',
       Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: '135',
+      Discount: true,
       price: 150,
-      percen: 10
+      percen: 10,
+      outsourcing: true
     }
   ]
 

@@ -1,10 +1,5 @@
-<ul>
-    <li *ngFor="let item of item$ | async">
-      {{ item.Name }}
-    </li>
-  </ul>
-<!-- <div class="card">
-  <p-table #dt1 [value]="item$ |async" dataKey="id">
+<div class="card" *ngIf="item$ |async as data">
+  <p-table #dt1 [value]="data" dataKey="id">
     <ng-template pTemplate="caption">
       <div class="flex caption_header">
         <span class="p-input-icon-left ml-auto">
@@ -33,12 +28,12 @@
         </td>
         <td>{{ product.id }}</td>
         <td>{{ product.Name }}</td>
-        <td>{{ product.category }}</td>
-        <td>{{ product.quantity }}</td>
-        <td>{{ product.quantity }}</td>
+        <td><img [src]="product.ImgUrl" alt=""></td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.Discount }}</td>
         <td>{{ product.quantity }}</td>
       </tr>
     </ng-template>
   </p-table>
 </div>
- -->
+

@@ -1,28 +1,37 @@
-<form>
+<form [formGroup]="myForm" (ngSubmit)="onSave()">
   <h1>Product management</h1>
   <div class="formulario">
     <label>
       Name
-      <input type="text" pInputText placeholder="Name" />
+      <input type="text" pInputText placeholder="Name" formControlName="Name" />
+      <span *ngIf="isValidField('Name')" class="form-text text-danger">
+        {{ getFieldError('Name') }}
+      </span>
     </label>
     <label>
       Imagen
-      <input type="text" pInputText placeholder="Link" />
+      <input type="text" pInputText placeholder="Link" formControlName="ImgUrl" />
+      <span *ngIf="isValidField('ImgUrl')" class="form-text text-danger">
+        {{ getFieldError('ImgUrl') }}
+      </span>
     </label>
     <label>
       Price
-      <input type="text" pInputText placeholder="Price" />
+      <input type="number" pInputText placeholder="Price" formControlName="price" />
+      <span *ngIf="isValidField('price')" class="form-text text-danger">
+        {{ getFieldError('price') }}
+      </span>
     </label>
     <div class="card flex">
-      <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+      <p-checkbox [binary]="true" inputId="binary" formControlName="Discount"></p-checkbox>
       <p>Does this product have a discount?</p>
     </div>
     <div class="card flex">
-      <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+      <p-checkbox [binary]="true" inputId="binary" formControlName="outsourcing"></p-checkbox>
       <p>Do you want to show this product in the main section?</p>
     </div>
     <label>Discount
-      <input type="text" pInputText placeholder="Discount" />
+      <input type="number" pInputText placeholder="Discount" formControlName="percen" />
     </label>
     <button>Save product</button>
   </div>
