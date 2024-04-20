@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent {
-  idProduct: string | null = null;
+  idProduct!: string;
 
   getProduct(id: string) {
     this.idProduct = id
