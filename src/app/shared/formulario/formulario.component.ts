@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './formulario.component.scss',
 })
 export class FormularioComponent {
+  @Input() idProduct: string | null = null;
   private firestore = inject(Firestore)
   private _collection = collection(this.firestore, 'ListProduct')
   private fb = inject(FormBuilder);

@@ -31,9 +31,9 @@
         <td><img [src]="product.ImgUrl" alt=""></td>
         <td>{{ product.price }}</td>
         <td>{{ product.Discount }}</td>
-        <td>{{ product.quantity }}</td>
+        <td><i class="pi pi-times" (click)="delete(product.id)"></i> <br> <br> <i class="pi pi-wrench"
+            (click)="searchProduct(product.id)"></i></td>
       </tr>
     </ng-template>
   </p-table>
 </div>
-

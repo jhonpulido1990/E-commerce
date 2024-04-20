@@ -1,4 +1,4 @@
 <div class="contain_dashboard">
-  <app-formulario/>
-  <app-table/>
+  <app-formulario [idProduct]="idProduct" />
+  <app-table (idProduct)="getProduct($event)" />
 </div>
