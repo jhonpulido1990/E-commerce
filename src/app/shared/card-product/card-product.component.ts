@@ -1,13 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface Product {
-  imgUrl: string;
-  text: string;
-  desc: number;
-  price: number;
-  percen: number;
-}
-
+import { Product } from '../../e-commerce/interfaces/product.interfaces';
 
 @Component({
   selector: 'app-card-product',

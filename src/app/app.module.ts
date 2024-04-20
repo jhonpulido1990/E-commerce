@@ -1,6 +1,9 @@
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +21,9 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp( environment.firebase )),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [provideAnimations()],
   bootstrap: [AppComponent]

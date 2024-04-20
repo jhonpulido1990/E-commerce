@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../../e-commerce/interfaces/product.interfaces';
 
-interface Product {
-  imgUrl: string;
-  text: string;
-  desc: number;
-  price: number;
-  percen: number;
-}
 
 @Component({
   selector: 'app-products',
@@ -17,29 +11,29 @@ export class ProductsComponent {
 
   public productos: Product[] = [
     {
-      imgUrl: '../../../assets/images/splash.png',
-      text: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      desc: 135,
+      ImgUrl: '../../../assets/images/splash.png',
+      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
+      Discount: '135',
       price: 150,
       percen: 10
     },{
-      imgUrl: '../../../assets/images/shampoo.png',
-      text: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      desc: 135,
+      ImgUrl: '../../../assets/images/shampoo.png',
+      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
+      Discount: '135',
       price: 150,
       percen: 10
     },
     {
-      imgUrl: '../../../assets/images/cepillobamboo.png',
-      text: 'organic bamboo toothbrush with soft natural bamboo bristles ',
-      desc: 135,
+      ImgUrl: '../../../assets/images/cepillobamboo.png',
+      Name: 'organic bamboo toothbrush with soft natural bamboo bristles ',
+      Discount: '135',
       price: 150,
       percen: 10
     },
     {
-      imgUrl: '../../../assets/images/splash.png',
-      text: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      desc: 135,
+      ImgUrl: '../../../assets/images/splash.png',
+      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
+      Discount: '135',
       price: 150,
       percen: 10
     }

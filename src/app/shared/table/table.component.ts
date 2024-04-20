@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './table.component.scss'
 })
 export class TableComponent {
-  products!: any[];
+  public products = signal([])
 }
