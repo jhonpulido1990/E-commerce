@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Product } from '../../e-commerce/interfaces/product.interfaces';
+import { Observable } from 'rxjs';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 
 
 @Component({
@@ -8,39 +10,12 @@ import { Product } from '../../e-commerce/interfaces/product.interfaces';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
+  productos$: Observable<Product[]>;
+  firestore: Firestore = inject(Firestore);
 
-  public productos: Product[] = [
-    {
-      ImgUrl: '../../../assets/images/splash.png',
-      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: true,
-      price: 150,
-      percen: 10,
-      outsourcing: true
-    },{
-      ImgUrl: '../../../assets/images/shampoo.png',
-      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: true,
-      price: 150,
-      percen: 10,
-      outsourcing: true
-    },
-    {
-      ImgUrl: '../../../assets/images/cepillobamboo.png',
-      Name: 'organic bamboo toothbrush with soft natural bamboo bristles ',
-      Discount: true,
-      price: 150,
-      percen: 10,
-      outsourcing: true
-    },
-    {
-      ImgUrl: '../../../assets/images/splash.png',
-      Name: 'Sensitivity Relief Vanilla & Peppermint Natural Mouthwash',
-      Discount: true,
-      price: 150,
-      percen: 10,
-      outsourcing: true
-    }
-  ]
+  constructor() {
+    const itemCollection = collection(this.firestore, 'ListProduct');
+    this.productos$ = collectionData(itemCollection, {idField: 'id'}) as Observable<Product[]>;
+  }
 
 }
